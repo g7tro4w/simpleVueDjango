@@ -19,12 +19,12 @@ export default new Vuex.Store({
   actions: {
     [types.GET_POST] (state, postIndex) {
       axios.get([urls.POST_URL])
-      .then(response => {
-        
-      })
-      .catch(error => {
+        .then(response => {
 
-      })
+        })
+        .catch(error => {
+
+        })
     }
   }
 })

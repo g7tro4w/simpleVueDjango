@@ -1,7 +1,7 @@
 <template>
-  <div class="postWrapper">
+  <article class="postWrapper">
     <div class="postHeader">
-      <h2>Post {{number}} {{ number === 1 ? 'spjorgpojsrepojgwpoerj g[pwe[gpfwke[fgk [pwekgf[pwe[g fpw[ekg[pwetg[p ew[fg ]]]]]]]]]]' : ''}}</h2>
+      <h2>{{ title }}</h2>
     </div>
     <div class="postBody">
       <div class="postImg">
@@ -35,12 +35,45 @@
         <p>03.05.2018</p>
       </div>
     </div>
-  </div>
+  </article>
 </template>
 
 <script>
 export default {
-  props: ['number']
+  props: {
+    id: {
+      type: Number,
+      required: true
+    },
+    title: {
+      type: String,
+      default: () => {
+        return (`Post ${this.id}`)
+      },
+      required: true
+    },
+    img: {
+      type: String,
+      default: () => {
+        return (``)
+      },
+      required: true
+    },
+    author: {
+      type: String,
+      default: () => {
+        return (`User`)
+      },
+      required: true
+    },
+    data: {
+      type: Date,
+      default: () => {
+        return (new Date())
+      },
+      required: true
+    }
+  }
 }
 </script>
 

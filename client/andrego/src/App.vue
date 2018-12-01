@@ -22,13 +22,13 @@
 </template>
 
 <script>
-  export default {
-    data () {
-      return{
-        showNavigation: true,
-      }
+export default {
+  data () {
+    return {
+      showNavigation: true
     }
   }
+}
 </script>
 
 <style lang="scss">
